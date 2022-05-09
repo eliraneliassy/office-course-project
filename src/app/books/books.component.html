@@ -1,0 +1,9 @@
+<input (input)="search($event.target)">
+
+
+<ng-container *ngIf="results$ | async as result">
+  <ng-container *ngFor="let book of result">
+    <app-book [book]="book" (addToWishList)="addToWishList($event)"></app-book>
+  </ng-container>
+
+</ng-container>
