@@ -42,6 +42,8 @@ export class BooksComponent implements OnInit, OnDestroy {
     //     })
     // )
 
+    console.log(this.booksStore.getValue());
+
     this.subscription = this.search$.
       pipe(
         debounceTime(300),
